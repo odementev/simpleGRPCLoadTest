@@ -23,6 +23,7 @@ docker-compose -f docker-compose.yml up d
 
 Advantages:
 - it is possible to load the simple gRPC server
+- it is possible to calculate the load level manually 
 
 Disadvantages:
 - the Jmeter report(.jtl) is not generated because the JSR223 controller is not debugged (it is always executed), instead the test results are written to files.
