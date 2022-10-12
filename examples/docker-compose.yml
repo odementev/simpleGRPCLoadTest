@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  service:
+    build: .
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    ports:
+      - "50051:50051"

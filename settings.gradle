@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        maven {
+            url = "https://nexus.m2.ru/repository/maven-public"
+        }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'simpleGRPCLoadTest'
+
