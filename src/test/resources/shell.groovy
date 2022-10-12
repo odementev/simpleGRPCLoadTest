@@ -1,10 +1,10 @@
 import java.time.LocalDateTime
 
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = './src/test/kotlin/ru/m2/qa/perf/simplegrpcloadtest/build/install/client/bin/hello-world-client'.execute()
+def proc = './src/test/kotlin/qa/simplegrpcloadtest/build/install/client/bin/hello-world-client'.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitForOrKill(1000)
-//println "out> $sout\nerr> $serr"
+
 def dt = LocalDateTime.now()
 
 if(sout) {
