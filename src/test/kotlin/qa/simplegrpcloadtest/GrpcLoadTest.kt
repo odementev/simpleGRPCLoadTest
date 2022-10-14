@@ -13,7 +13,7 @@ class GrpcLoadTest {
     fun testPerformance() {
         val stats = testPlan(
             rpsThreadGroup()
-                .rampTo(8.0, Duration.ofMinutes(10))
+                .rampTo(10.0, Duration.ofMinutes(20))
                 .children(
                     jsr223Sampler(getResource("shell.groovy"))
                 )
