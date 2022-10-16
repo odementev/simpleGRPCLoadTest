@@ -16,7 +16,9 @@ class GrpcLoadTest {
                 .rampTo(10.0, Duration.ofMinutes(20))
                 .children(
                     jsr223Sampler(getResource("shell.groovy"))
-                )
+                ),
+            influxDbListener("http://localhost:8086/write?db=jmeter"),
+            htmlReporter("reports")
         ).run()
         Assertions.assertThat(stats.overall().sampleTimePercentile99()).isLessThan(Duration.ofSeconds(5))
     }

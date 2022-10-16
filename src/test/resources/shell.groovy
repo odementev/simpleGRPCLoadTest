@@ -16,6 +16,7 @@ if(sout) {
 else {
     def logFile2 = new File("src/test/resources/err.txt")
     logFile2.append("$dt,fail\n")
+    throw new IOException()
 }
 
 
