@@ -3,9 +3,8 @@ def proc = './src/test/kotlin/qa/simplegrpcloadtest/build/install/client/bin/hel
 proc.consumeProcessOutput(sout, serr)
 proc.waitForOrKill(1000)
 
-if(sout == null) {
+if(sout.isEmpty()) {
     throw new IOException()
 }
-
 
 
